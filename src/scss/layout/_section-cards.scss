@@ -1,0 +1,69 @@
+.section-cards {
+    margin-top: -93px;
+    position: relative;
+    z-index: 3;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card4 {
+    flex: 1 1 25%;
+    max-width: 25%;
+}
+.card {
+    padding: 60px 25px;
+    @include flex(center,center,column);
+}
+.card-title {
+    @include text(36px,43px,700,$dark);
+    font-family: $secondary-font;
+}
+.card-img {
+    display: block;
+    width: 100%;
+}
+.bg-peach {
+    background-color: $peach-light;
+}
+.bg-dark {
+    background-color: $dark;
+    .card-title {
+        color: $white;
+    }
+    .card-line {
+        background-color: $white;
+    }
+}
+.card-line {
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: $dark;
+    margin-top: 30px;
+}
+.card-text {
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+@include mq(tablet) {
+    .card4 {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+@include mq(phone) {
+    .container {
+        display: block;
+    }
+    .card4 {
+        flex: none;
+        max-width: 290px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

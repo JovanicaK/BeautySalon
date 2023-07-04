@@ -1,0 +1,86 @@
+/* helpers */
+.wrap {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        opacity: 0.3;
+    }
+}
+
+.relative {
+    position: relative;
+    z-index: 2;
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.white {
+    color: $white!important;
+}
+
+
+.bg,
+%cover {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@mixin noFlex {
+    flex: none;
+    max-width: 100%;
+}
+
+@mixin src($high) {
+    display: block;
+    height: $high;
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin text($fz,$lh,$fw,$color) {
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin flex($jc,$ai,$fd) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+@mixin centerFlex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
