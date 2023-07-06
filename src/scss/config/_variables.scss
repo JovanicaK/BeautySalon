@@ -5,33 +5,14 @@ $light-grey: #e3e3eb;
 $white: #fff;
 $peach-light: #fbd2c0;
 $peach: #f2b392;
-$whitish: rgba(#fff, 0.2);
+$white-20: rgba(#fff, 0.2);
 $blue: #01546B;
 $light-blue: #0AC6FC;
 $grey: #97a9bd;
-$blue1: #3B5998;
-$red: #db4a39;
-$blue2: #0072b1;
-$blue3: #1da1f2;
-$blue4: #4e658e;
-$footer-blue: #026B8A;
+
 
 
 // fonts
 $primary-font:  'Roboto', sans-serif;
 $secondary-font: 'Dancing Script', 'cursive';
 
-// loops
-$socialMediaColors: ('sm1':$blue1,
-            'sm2':$red,
-            'sm3':$blue2,
-            'sm4':$blue3,
-            'sm5':$blue4);
-@each $item,$item-color in $socialMediaColors {
-    .#{$item}-bg-color {
-        background-color: $item-color;
-        svg {
-            fill: $white;
-        }
-    }
-}

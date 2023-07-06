@@ -1,5 +1,5 @@
 body {
-    @include text(16px,26px,400,$dark);
+    @include text(16px,26px,400);
     font-family: $primary-font;
 }
 

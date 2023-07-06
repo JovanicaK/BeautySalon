@@ -5,22 +5,16 @@ var $header = $('.header')
 
 
 function navigation() {
-  var $toggle = $('.toggle');
+  var $toggle = $('.toggle, .toggle--close');
 
-
-  $(document).ready(function(){
-    $toggle.on('click', function(){
-      $nav.animate({
-          width: 'toggle'
-      });
+  $toggle.on('click', function(){
+    $nav.animate({
+      width: 'toggle'
     });
-    $('.toggle-close').on('click',function(){
-      $nav.animate({
-          width: 'toggle'
-      });
-    })
-  });
+    });
+  
 }
+  
 
 
 

@@ -1,66 +1,54 @@
 .header {
     background-color: $white;
     position: relative;
-    .wrap {
-        @include flex(space-between,center,row);
-    }
-}
-.logo {
-    display: block;
     margin: 20px 0;
-    text-decoration: none;
-    &:hover {
-        opacity: 0.6;
+    .wrapper {
+        @include flex-between;
+    }
+    .nav-link {
+        color: $white;
     }
 }
-.logo-title {
-    @include text(36px,44px,700,$dark);
+
+.logo {
+    display: inline-block;
 }
+
+.logo-src {
+   @include src(50px);
+}
+
 .nav {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     background-color: $dark;
+    @include mq(tablet) {
+        width: 100%;
+    }
+}
+
+.toggle--close {
+    display: block;
+    margin: 20px 20px 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-list {
+    @include centerFlex;
+    flex-direction: column;
+    padding: 20px 65px;
+}
+
+.list-icon {
+    font-size: 36px;
+}
+
+.x-icon {
+    font-size: 28px;
     color: $white;
 }
-.nav-inner {
-    width: 250px;
-    height: 595px;
-}
-.toggle-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-    svg {
-        fill: $white;
-    }
-}
-.nav-list {
-    @include flex(center,center,column);
-    padding-top: 70px;
-}
-.nav-link {
-    display: block;
-    padding: 8px 0;
-    text-decoration: none;
-    @include text(20px,20px,400,$white);
-}
-.toggle {
-    width: 44px;
-    height: 44px;
-    border: none;
-    background-color: transparent;
-    @include centerFlex();
-    svg {
-        fill: $dark;
-    }
-    &:hover {
-        opacity: 0.6;
-    }
-}
+
 

@@ -1,0 +1,14 @@
+button {
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+}
+
+.toggle {
+    width: 44px;
+    height: 44px;
+    border: none;
+    background-color: transparent;
+    @include centerFlex();
+}

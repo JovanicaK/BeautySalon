@@ -110,7 +110,7 @@ function icons() {
 // Watch files
 
 function watchFiles() {
-    watch('./src/scss/*', css);
+    watch('./src/css/*', css);
     watch('./src/js/*', js);
     watch('./src/images/*', img);
     watch('./src/scss/**/*.s+(a|c)ss', lint);
@@ -129,6 +129,6 @@ function browserSync() {
 
 // Tasks to define the execution of the functions simultaneously or in series
 
-exports.watch = parallel(watchFiles, browserSync);
+exports.watch = watchFiles;
 exports.default = parallel( html, js, css, img);
 exports.icons = icons;

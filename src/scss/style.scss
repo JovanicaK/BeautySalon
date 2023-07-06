@@ -1,8 +1,18 @@
 // config
 
+@import 'config/reset';
+@import 'config/variables';
+@import 'config/fonts';
+@import 'config/helpers';
+@import 'config/breakpoints';
+@import 'config/default-settings';
 @import 'config/iconfont';
+
+// components
+
+@import 'components/links';
+@import 'components/buttons';
 
 // layout
 
 @import 'layout/header';
-@import 'layout/footer';

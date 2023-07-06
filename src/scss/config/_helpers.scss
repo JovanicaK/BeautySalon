@@ -1,5 +1,5 @@
 /* helpers */
-.wrap {
+.wrapper {
     width: 100%;
     max-width: 1300px;
     padding: 0 20px;
@@ -64,11 +64,10 @@
     transform: translate(-50%,-50%);
 }
 
-@mixin text($fz,$lh,$fw,$color) {
+@mixin text($fz,$lh,$fw) {
     font-size: $fz;
     line-height: $lh;
     font-weight: $fw;
-    color: $color;
 }
 
 @mixin flex($jc,$ai,$fd) {
@@ -77,6 +76,12 @@
     justify-content: $jc;
     align-items: $ai;
     flex-direction: $fd;
+}
+
+@mixin flex-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @mixin centerFlex() {
