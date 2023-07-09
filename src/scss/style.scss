@@ -1,12 +1,12 @@
 // config
 
 @import 'config/reset';
-@import 'config/variables';
 @import 'config/fonts';
+@import 'config/variables';
 @import 'config/helpers';
 @import 'config/breakpoints';
-@import 'config/default-settings';
 @import 'config/iconfont';
+@import 'config/typografy';
 
 // components
 
@@ -16,3 +16,4 @@
 // layout
 
 @import 'layout/header';
+@import 'layout/banner'

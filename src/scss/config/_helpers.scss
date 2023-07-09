@@ -1,7 +1,7 @@
 /* helpers */
 .wrapper {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1140px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -20,30 +20,10 @@
     }
 }
 
-.relative {
-    position: relative;
-    z-index: 2;
-}
-
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.capitalize {
-    text-transform: capitalize;
-}
-
-.white {
-    color: $white!important;
-}
-
-
-.bg,
-%cover {
-    background-position: top center;
+.bg {
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;  
 }
 
 

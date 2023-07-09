@@ -1,18 +1,25 @@
 // colors
 $black: #000000;
 $dark: #111111;
-$light-grey: #e3e3eb;
 $white: #fff;
-$peach-light: #fbd2c0;
-$peach: #f2b392;
+$apricot: #ed9977;
+$peach: #fbd2c0;
+$tacao: #f2b392;
 $white-20: rgba(#fff, 0.2);
 $blue: #01546B;
 $light-blue: #0AC6FC;
 $grey: #97a9bd;
-
+$concrete: #f2f2f2;
 
 
 // fonts
 $primary-font:  'Roboto', sans-serif;
 $secondary-font: 'Dancing Script', 'cursive';
 
+body {
+    font-family: $primary-font;
+}
+
+* {
+    transition: all 0.3s ease-in-out;
+}

@@ -12,3 +12,11 @@ button {
     background-color: transparent;
     @include centerFlex();
 }
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    @include text(16px,23px,400);
+}

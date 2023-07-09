@@ -1,76 +1,66 @@
 .banner {
-    padding: 100px 0 160px;
-    .wrap {
-        @include flex(flex-end,center,row);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @include mq(phone) {
+        flex-direction: column-reverse;
     }
 }
-.banner-holder {
-    max-width: 50%;
-    @include flex(flex-start,flex-start,column);
+
+.banner__img {
+    flex: 1 1 53.33%;
+    max-width: 53.33%;
+    min-height: 680px;
+    @include mq(phone) {
+        @include noFlex;
+        min-height: 610px;
+    }
 }
-.banner-subtitle {
-    @include text(24px,29px,300,$dark);
+
+.banner__content {
+    flex: 1 1 46.66%;
+    max-width: 46.66%;
+    padding: 100px 60px 50px 0;
+    color: $dark;
+    position: relative;
+    z-index: 2;
+    @include mq(phone) {
+        @include noFlex;
+        padding: 50px 30px;
+    }
+}
+
+.banner__subtitle {
     display: block;
     margin-bottom: 20px;
 }
-.banner-title {
-    @include text(98px,108px,400,$dark);
+
+.banner__title {
     margin-bottom: 20px;
-    font-family: $secondary-font;
+
 }
-.banner-text {
-    @include text(29px,34px,400,$dark);
+
+.banner__text {
     margin-bottom: 20px;
-    margin-right: 10px;
+    margin-right: 82px;
+    @include mq(tablet) {
+        margin-right: 31px;
+    }
 }
-.banner-dsc {
-    display: inline-block;
-    font-style: italic;
-    margin-bottom: 30px;
-}
-.banner-link {
+
+.banner__link {
     display: inline;
     color: $dark;
+    font-style: normal;
     &:hover {
         color: $white;
     }
 }
-.banner-btn {
-    display: block;
-    text-decoration: none;
-    padding: 10px 30px;
-    background-color: $peach-light;
-    @include text(16px,23px,400,$dark); 
+.banner__btn {
+    color: $dark;
+    background-color: $apricot;
+    letter-spacing: 4px;
     &:hover {
-        background-color: $peach;
-    }
-}
-
-@include mq(phone) {
-    .banner {
-        .wrap {
-            display: block;
-            text-align: center;
-        }
-    }
-    .banner-holder {
-        max-width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin: 0 20px;
-    }
-    .banner-subtitle {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    .banner-title {
-        font-size: 70px;
-        line-height: 80px;
-    }
-    .banner-text {
-        text-align: center;
-        margin-right: 0;
-        font-size: 18px;
-        line-height: 20px;
+        background-color: $tacao;
     }
 }

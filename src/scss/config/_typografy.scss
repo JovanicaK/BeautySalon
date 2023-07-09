@@ -1,0 +1,38 @@
+.subtitle {
+    @include text(24px,29px,300);
+    text-transform: uppercase;
+    @include mq(phone) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+h1, 
+.h1 {
+    @include text(98px,108px,400);
+    font-family: $secondary-font;
+    text-transform: capitalize;
+    @include mq(tablet) {
+        font-size: 60px;
+        line-height: 70px;
+    } 
+    @include mq(phone) {
+        font-size: 72px;
+        line-height: 82px;
+    }
+}
+
+p {
+    @include text(24px,38px,400);
+    @include mq(tablet) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.small-text {
+    display: block;
+    font-style: italic;
+    margin-bottom: 30px;
+    @include text(16px,26px,400);
+}

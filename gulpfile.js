@@ -19,7 +19,6 @@ const browsersync = require('browser-sync').create();
 const sassLint = require('gulp-sass-lint');
 const consolidate = require('gulp-consolidate');
 const iconfont = require('gulp-iconfont');
-var svgicons2svgfont = require('gulp-svgicons2svgfont');
 
 // JS function 
 
@@ -62,6 +61,13 @@ function html() {
     .pipe(browsersync.stream());
 }
 
+// Copy fonts 
+
+function fonts() {
+    return src('./src/fonts/**/*.{ttf,woff,eof,svg}')
+    .pipe(dest('./assets/fonts'));
+}
+
 // Optimize images
 
 function img() {
@@ -74,13 +80,11 @@ function img() {
 
 function lint() {
     return src('./src/scss/**/*.s+(a|c)ss')
-        .pipe(sassLint())
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError())
         .pipe(sassLint({
             configFile: 'sass-lint.yml'
         }))
-        .pipe(browsersync.stream());
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError());
 }
 
 // Iconfont
@@ -110,10 +114,9 @@ function icons() {
 // Watch files
 
 function watchFiles() {
-    watch('./src/css/*', css);
-    watch('./src/js/*', js);
-    watch('./src/images/*', img);
-    watch('./src/scss/**/*.s+(a|c)ss', lint);
+    watch('./src/css/*', series(css));
+    watch('./src/scss/**/*.s+(a|c)ss', series(lint));
+    watch('./*html', series(html));
 }
 
 // BrowserSync
@@ -128,7 +131,6 @@ function browserSync() {
 }
 
 // Tasks to define the execution of the functions simultaneously or in series
-
-exports.watch = watchFiles;
-exports.default = parallel( html, js, css, img);
+exports.default = watchFiles;
+exports.build = parallel( html,fonts, js, css, img);
 exports.icons = icons;
