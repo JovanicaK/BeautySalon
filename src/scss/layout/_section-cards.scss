@@ -1,69 +1,102 @@
-.section-cards {
-    margin-top: -93px;
+.section__cards {
+    margin-top: -140px;
     position: relative;
     z-index: 3;
 }
-.container {
+
+.section__cards-container {
     display: flex;
     flex-wrap: wrap;
-}
-.card4 {
-    flex: 1 1 25%;
-    max-width: 25%;
-}
-.card {
-    padding: 60px 25px;
-    @include flex(center,center,column);
-}
-.card-title {
-    @include text(36px,43px,700,$dark);
-    font-family: $secondary-font;
-}
-.card-img {
-    display: block;
-    width: 100%;
-}
-.bg-peach {
-    background-color: $peach;
-}
-.bg-dark {
-    background-color: $dark;
-    .card-title {
-        color: $white;
+    @include mq(phone) {
+        display: block;
     }
-    .card-line {
-        background-color: $white;
-    }
-}
-.card-line {
-    display: block;
-    width: 45px;
-    height: 3px;
-    background-color: $dark;
-    margin-top: 30px;
-}
-.card-text {
-    text-align: center;
-    font-style: italic;
-    margin-top: 20px;
-    margin-bottom: 24px;
 }
 
-@include mq(tablet) {
-    .card4 {
+.card {
+    flex: 1 1 25%;
+    max-width: 25%;
+    min-height: 270px;
+    @include mq(tablet) {
         flex: 1 1 50%;
         max-width: 50%;
     }
-}
-
-@include mq(phone) {
-    .container {
-        display: block;
-    }
-    .card4 {
+    @include mq(phone) {
         flex: none;
         max-width: 290px;
         margin: 0 auto;
         text-align: center;
     }
 }
+
+.card--iner {
+    padding: 0 30px;
+    @include centerFlex;
+    flex-direction: column;
+}
+
+.card__img-wrap {
+    position: relative;
+    padding-bottom: 106%;
+}
+
+.card__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card--peach {
+    background-color: $peach;
+    .card__title {
+        color: $dark;
+    }
+    .card__line {
+        background-color: $dark;
+    }
+}
+
+.card--dark {
+    background-color: $dark;
+    .card__title {
+        color: $white;
+    }
+    .card__line {
+        background-color: $white;
+    }
+    .card__text {
+        color: $white;
+    }
+}
+
+
+.card__title {
+    margin-top: 25px;
+}
+
+.card__line {
+    display: block;
+    width: 54px;
+    height: 3px;
+    margin-top: 30px;
+    background-color: $dark;
+    @include mq(tablet) {
+        width: 45px;
+    }
+    @include mq(phone) {
+        width: 32px;
+    }
+}
+
+.card__text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    @include mq(phone) {
+        margin: 20px 0;
+    }
+}
+

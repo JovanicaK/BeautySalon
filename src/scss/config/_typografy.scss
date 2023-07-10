@@ -22,6 +22,16 @@ h1,
     }
 }
 
+h3 {
+    @include text(36px,43px,700);
+    font-family: $secondary-font;
+    text-transform: capitalize;
+    @include mq(phone) {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
 p {
     @include text(24px,38px,400);
     @include mq(tablet) {
@@ -32,7 +42,7 @@ p {
 
 .small-text {
     display: block;
-    font-style: italic;
     margin-bottom: 30px;
+    font-style: italic;
     @include text(16px,26px,400);
 }
