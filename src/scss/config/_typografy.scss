@@ -22,6 +22,17 @@ h1,
     }
 }
 
+h2 {
+    @include text(60px,66px,300);
+    font-family: $secondary-font;
+    margin-top: 65px;
+    text-transform: capitalize;
+    @include mq(tablet) {
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
 h3 {
     @include text(36px,43px,700);
     font-family: $secondary-font;

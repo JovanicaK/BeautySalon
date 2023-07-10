@@ -21,10 +21,14 @@
 .nav {
     display: none;
     position: absolute;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: $dark;
     @include mq(tablet) {
+        width: 100%;
+    }
+    @include mq(phone) {
         width: 100%;
     }
 }

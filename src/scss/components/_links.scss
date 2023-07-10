@@ -10,3 +10,20 @@ a {
     text-decoration: none;
     @include text(20px,20px,400);
 }
+
+.learn-link {
+    display: inline-block;
+    text-decoration: none;
+    @include text(16px,29px,400);
+    color: $peach;
+    margin-bottom: 65px;
+    &:hover {
+        color: $rose-bud;
+    }
+    @include mq(tablet) {
+        margin-bottom: 0;
+    }
+    @include mq(phone) {
+        margin-bottom: 0;
+    }
+}

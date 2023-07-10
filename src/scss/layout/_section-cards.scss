@@ -1,10 +1,10 @@
-.section__cards {
+.section-cards {
     margin-top: -140px;
     position: relative;
     z-index: 3;
 }
 
-.section__cards-container {
+.section-cards__container {
     display: flex;
     flex-wrap: wrap;
     @include mq(phone) {

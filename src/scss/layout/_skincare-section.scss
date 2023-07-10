@@ -1,0 +1,113 @@
+.skincare-section {
+    padding: 70px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include mq(phone) {
+        display: block;
+    }
+}
+
+.col {
+    flex: 1 1 50%;
+    max-width: 50%;
+    @include mq(phone) {
+        @include noFlex();
+    }
+}
+
+.skincare-section__layer-container {
+    position: relative;
+}
+
+.layer-1 {
+    height: 593px;
+    width: 394px;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    background-color: transparent;
+    border: 5px solid $peach;
+    @include mq(tablet) {
+        height: 520.4px;
+        width: 280.4px;
+    }
+    @include mq(phone) {
+        height: 487.4px;
+        width: 237.4px;
+    }
+}
+
+.layer-2 {
+    height: 541px;
+    width: 462px;
+    position: absolute;
+    z-index: 1;
+    top: 90px;
+    right: 0;
+    background-color: $peach;
+    opacity: 0.5;
+    @include mq(tablet) {
+        height: 471px;
+        width: 291px;
+        top: 70px;
+    }
+    @include mq(phone) {
+        height: 445px;
+        width: 229px;
+        top: 70px;
+        left: 30%;
+    }
+}
+
+.layer-3 {
+    width: 417px;
+    height: 519px;
+    position: absolute;
+    z-index: 3;
+    top: 37px;
+    left: 37px;
+    @include mq(tablet) {
+        height: 452px;
+        width: 296px;
+        top: 34px;
+        left: 34px;
+    }
+    @include mq(phone) {
+        height: 415px;
+        width: 287px;
+        top: 36px;
+        left: 36px;
+    }
+}
+
+.layer-3__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.skincare-section__content-container{
+    padding: 0 51px 0 43px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    color: $dark;
+    @include mq(tablet) {
+        padding: 0 32px 0 27px;
+    }
+}
+
+.skincare-section__text {
+    font-style: normal;
+    margin-top: 34px;
+    margin-bottom: 37px;
+}
