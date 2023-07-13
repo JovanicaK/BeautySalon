@@ -1,0 +1,57 @@
+.products {
+    .card__line {
+        @include mq(phone) {
+            width: 24px;
+        }
+    }
+}
+.products__img {
+    min-height: 641px;
+    @include mq(tablet) {
+        min-height: 537px;
+    }
+}
+
+.products__content {
+    padding-left: 56px;
+    padding-right: 87px;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 641px;
+    @include mq(tablet) {
+        min-height: 537px;
+        padding-left: 35px;
+        padding-right: 55px;
+    }
+    @include mq(phone) {
+        padding: 0 52px;
+    }
+}
+
+.products__title {
+    @include mq(phone) {
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+.products__text {
+    margin: 30px 0;
+}
+
+.products__btn {
+    background-color: $black;
+    color: $white;
+    margin-bottom: 65px;
+    margin-right: 338px;
+    text-align: center;
+    @include mq(tablet) {
+        margin-bottom: 50px;
+        margin-right: 88.4px;
+    }
+    @include mq(phone) {
+        margin-right: auto;
+    }
+}

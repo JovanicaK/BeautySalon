@@ -26,46 +26,35 @@
     background-size: cover;  
 }
 
-
-@mixin noFlex {
-    flex: none;
-    max-width: 100%;
-}
-
-@mixin src($high) {
-    display: block;
-    height: $high;
-}
-
-@mixin center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-@mixin text($fz,$lh,$fw) {
-    font-size: $fz;
-    line-height: $lh;
-    font-weight: $fw;
-}
-
-@mixin flex($jc,$ai,$fd) {
+.row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: $jc;
-    align-items: $ai;
-    flex-direction: $fd;
+    align-items: center;
+    @include mq(phone) {
+        display: block;
+    }
 }
 
-@mixin flex-between() {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.col-50 {
+    flex: 1 1 50%;
+    max-width: 50%;
+    @include mq(phone) {
+        @include noFlex();
+    }
 }
 
-@mixin centerFlex() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.col-53 {
+    flex: 1 1 53.33%;
+    max-width: 53.33%;
+    @include mq(phone) {
+        @include noFlex();
+    }
+}
+
+.col-46 {
+    flex: 1 1 46.66%;
+    max-width: 46.66%;
+    @include mq(phone) {
+        @include noFlex();
+    }
 }

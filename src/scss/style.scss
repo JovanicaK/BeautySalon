@@ -3,8 +3,9 @@
 @import 'config/reset';
 @import 'config/fonts';
 @import 'config/variables';
-@import 'config/helpers';
 @import 'config/breakpoints';
+@import 'config/mixins';
+@import 'config/helpers';
 @import 'config/iconfont';
 @import 'config/typografy';
 
@@ -19,3 +20,4 @@
 @import 'layout/banner';
 @import 'layout/section-cards';
 @import 'layout/skincare-section';
+@import 'layout/products';

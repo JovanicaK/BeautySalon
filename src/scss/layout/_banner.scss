@@ -8,24 +8,18 @@
 }
 
 .banner__img {
-    flex: 1 1 53.33%;
-    max-width: 53.33%;
     min-height: 680px;
     @include mq(phone) {
-        @include noFlex;
         min-height: 610px;
     }
 }
 
 .banner__content {
-    flex: 1 1 46.66%;
-    max-width: 46.66%;
     padding: 100px 60px 50px 0;
     color: $dark;
     position: relative;
     z-index: 2;
     @include mq(phone) {
-        @include noFlex;
         padding: 50px 30px;
     }
 }
@@ -37,7 +31,6 @@
 
 .banner__title {
     margin-bottom: 20px;
-
 }
 
 .banner__text {
@@ -46,6 +39,11 @@
     @include mq(tablet) {
         margin-right: 31px;
     }
+}
+
+.banner__text--italic {
+    font-style: italic;
+    margin-bottom: 30px;
 }
 
 .banner__link {

@@ -1,0 +1,42 @@
+@mixin noFlex {
+    flex: none;
+    max-width: 100%;
+}
+
+@mixin src($high) {
+    display: block;
+    height: $high;
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin text($fz,$lh,$fw) {
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: $fw;
+}
+
+@mixin flex($jc,$ai,$fd) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+@mixin flex-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin centerFlex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

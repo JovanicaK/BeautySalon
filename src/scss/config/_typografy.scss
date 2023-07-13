@@ -26,7 +26,6 @@ h2 {
     @include text(60px,66px,300);
     font-family: $secondary-font;
     margin-top: 65px;
-    text-transform: capitalize;
     @include mq(tablet) {
         font-size: 36px;
         line-height: 40px;
@@ -52,8 +51,5 @@ p {
 }
 
 .small-text {
-    display: block;
-    margin-bottom: 30px;
-    font-style: italic;
     @include text(16px,26px,400);
 }
