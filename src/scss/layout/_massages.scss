@@ -1,0 +1,85 @@
+.massages {
+    padding: 70px 0;
+}
+
+.massages__content-container {
+    padding: 0 51px 0 43px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    color: $dark;
+    .learn-link {
+        margin-bottom: 50px;
+    }
+    @include mq(tablet) {
+        padding: 0 32px 0 27px;
+    }
+}
+
+.massages__text {
+    margin-top: 30px;
+    margin-bottom: 42px;
+}
+
+.massages_layer-container {
+    position: relative;
+    min-height: 618px;
+    @include mq(tablet) {
+        min-height: 500px;
+    }
+    @include mq(phone) {
+        min-height: 507px;
+    }
+    .layer-1 {
+        height: 479px;
+        width: 479px;
+        top: 75px;
+        @include mq(tablet) {
+            height: 340px;
+            width: 302px;
+        }
+        @include mq(phone) {
+            height: 390px;
+            width: 238px;
+            top: 40px;
+        }
+    }
+    .layer-2 {
+        height: 453px;
+        width: 462px;
+        bottom: 0;
+        right: 0;
+        top: 165px;
+        @include mq(tablet) {
+            height: 315px;
+            width: 291px;
+            left: 30%;
+        }
+        @include mq(phone) {
+            height: 345px;
+            width: 229px;
+            top: 130px;
+            left: 20%;
+        }
+    }
+    .layer-3 {
+        width: 525px;
+        height: 503px;
+        top: 0;
+        right: 51px;
+        left: 51px;
+        @include mq(tablet) {
+            width: 344px;
+            height: 356px;
+            left: 42px;
+            right: 42px;
+        }
+        @include mq(phone) {
+            width: 280px;
+            height: 390px;
+            left: 30px;
+            right: 30px;
+        }
+    }
+}

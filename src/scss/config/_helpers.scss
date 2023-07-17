@@ -66,3 +66,19 @@
         @include noFlex();
     }
 }
+
+.col-45 {
+    flex: 1 1 45%;
+    max-width: 45%;
+    @include mq(phone) {
+        @include noFlex();
+    }
+}
+
+.col-55 {
+    flex: 1 1 55%;
+    max-width: 55%;
+    @include mq(phone) {
+        @include noFlex();
+    }
+}
