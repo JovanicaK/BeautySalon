@@ -1,0 +1,64 @@
+.reservation {
+    padding: 104px 0;
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.reservation__content-holder {
+    max-width: 682px;
+    background-color: $black;
+    padding: 40px 40px 51px;
+    @include mq(phone) {
+        padding: 27px 16.5px;
+        max-width: 307px;
+    }
+}
+
+.reservation__content {
+    color: $white;
+    background-color: $black;
+    border: 0.8px solid $white;
+    padding: 50px 55px;
+    .card__line {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $white;
+    }
+    @include mq(phone) {
+        padding: 50px 20px;
+    }
+}
+
+.reservation__title {
+    text-align: center;
+    text-transform: none;
+}
+
+.reservation__text {
+    margin-top: 20px;
+}
+
+.reservation__form {
+    margin: 20px 0;
+}
+
+.reservation__input,
+.reservation__box {
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-family: $primary-font;
+    @include text(16px,26px,400);
+}
+
+.reservation__btn {
+    background-color: $tacao;
+    &:hover {
+        background-color: $rose-bud;
+    }
+}
