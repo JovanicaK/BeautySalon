@@ -42,6 +42,12 @@ h3 {
     }
 }
 
+h4 {
+    @include text(18px,22px,300);
+    font-family: $secondary-font;
+
+}
+
 p {
     @include text(24px,38px,400);
     @include mq(tablet) {
@@ -52,4 +58,13 @@ p {
 
 .small-text {
     @include text(16px,26px,400);
+}
+
+.extra-small-text {
+    @include text(14px,22.4px,400);
+}
+
+small {
+    @include text(12.8px,20.5px,400);
+    color: $white;
 }

@@ -8,7 +8,7 @@
 
 .layer-1 {
     height: 593px;
-    width: 394px;
+    width: 73%;
     position: relative;
     z-index: 2;
     top: 0;
@@ -16,17 +16,15 @@
     border: 5px solid $peach;
     @include mq(tablet) {
         height: 520.4px;
-        width: 280.4px;
     }
     @include mq(phone) {
         height: 487.4px;
-        width: 237.4px;
     }
 }
 
 .layer-2 {
     height: 541px;
-    width: 462px;
+    width: 85.55%;
     position: absolute;
     z-index: 1;
     top: 90px;
@@ -35,19 +33,14 @@
     opacity: 0.5;
     @include mq(tablet) {
         height: 471px;
-        width: 291px;
-        top: 70px;
     }
     @include mq(phone) {
         height: 445px;
-        width: 229px;
-        top: 70px;
-        left: 30%;
     }
 }
 
 .layer-3 {
-    width: 417px;
+    width: 77%;
     height: 519px;
     position: absolute;
     z-index: 3;
@@ -55,15 +48,9 @@
     left: 37px;
     @include mq(tablet) {
         height: 452px;
-        width: 296px;
-        top: 34px;
-        left: 34px;
     }
     @include mq(phone) {
         height: 415px;
-        width: 287px;
-        top: 36px;
-        left: 36px;
     }
 }
 
@@ -86,6 +73,9 @@
     color: $dark;
     @include mq(tablet) {
         padding: 0 32px 0 27px;
+    }
+    @include mq(phone) {
+        padding: 0;
     }
 }
 
