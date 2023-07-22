@@ -1,40 +1,23 @@
 var $nav = $('.nav');
-var opened = 'opened';
-var $header = $('.header')
-
-
 
 function navigation() {
   var $toggle = $('.toggle, .toggle--close');
+  var $main = $('main, footer');
 
   $toggle.on('click', function(){
     $nav.animate({
       width: 'toggle'
     });
-    });
+    $main.css('opacity','0.3');
+  });
+  $(window).on('scroll', function() {
+    if($(this).height()>500) {
+      $nav.removeAttr('style');
+      $main.removeAttr('style');
+    }
+  })
   
-}
-  
-
-
-
-
-function backToTop() {
-  var $btn = $('.backtotop-btn');
-    $(window).on('scroll', function() {
-      if ($(window).scrollTop() > 150) {
-        $btn.fadeIn(300);
-      } else {
-        $btn.fadeOut(300);
-      }
-    });
-    $btn.on('click', function() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, '300');
-    });
 }
 
 navigation();
-backToTop();
 

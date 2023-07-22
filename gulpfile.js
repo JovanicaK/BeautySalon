@@ -32,8 +32,7 @@ function js() {
         .pipe(rename({
             extname: '.min.js'
         }))
-        .pipe(dest('./assets/js/'))
-        .pipe(browsersync.stream());
+        .pipe(dest('./assets/js/'));
 }
 
 // CSS function 
@@ -49,22 +48,20 @@ function css() {
             cascade: false
         }))
         .pipe(cssnano())
-        .pipe(dest('./assets/css/'))
-        .pipe(browsersync.stream());
+        .pipe(dest('./assets/css/'));
 }
 
 // Copy HTML
 
 function html() {
-    return src('*.html')
-    .pipe(dest('assets'))
-    .pipe(browsersync.stream());
+    return src('index.html')
+    .pipe(dest('assets'));
 }
 
 // Copy fonts 
 
 function fonts() {
-    return src('./src/fonts/**/*.{ttf,woff,eof,svg}')
+    return src('./src/fonts/**/*.{ttf,woff,woff2,eof,svg}')
     .pipe(dest('./assets/fonts'));
 }
 
@@ -72,8 +69,7 @@ function fonts() {
 
 function img() {
     return src('./src/images/*')
-        .pipe(dest('./assets/images'))
-        .pipe(browsersync.stream());
+        .pipe(dest('./assets/images'));
 }
 
 // Scss-Lint
@@ -89,7 +85,7 @@ function lint() {
 
 // Iconfont
 function icons() {
-    return src('src/images/svg/*.svg')
+    return src('./src/images/svg/*.svg')
     .pipe(iconfont({
         fontName: 'iconfont',
         formats: ['woff', 'woff2'],
@@ -108,29 +104,34 @@ function icons() {
             }))
             .pipe(dest('src/scss/config'));
     })
-    .pipe(dest('assets/fonts'));
+    .pipe(dest('./assets/fonts'));
 }
 
 // Watch files
 
-function watchFiles() {
-    watch('./src/css/*', series(css));
-    watch('./src/scss/**/*.s+(a|c)ss', series(lint));
-    watch('./*html', series(html));
+function watchTask() {
+    watch('./index.html', series(html,browserSyncReload));
+    watch(['src/scss/**/*.scss','src/js/**/*.js','./src/images/*'], series(css,js,img,browserSyncReload));
 }
 
 // BrowserSync
 
-function browserSync() {
+function browserSync(cb) {
     browsersync.init({
         server: {
             baseDir: './'
         },
-        port: 3000
     });
+    cb();
+}
+
+function browserSyncReload(cb) {
+    browsersync.reload();
+    cb();
 }
 
 // Tasks to define the execution of the functions simultaneously or in series
-exports.default = watchFiles;
-exports.build = parallel( html,fonts, js, css, img);
+exports.default = series (html, css, js, browserSync, watchTask);
+exports.build = parallel (html, fonts, js, css, img, fonts);
 exports.icons = icons;
+exports.lint = lint;

@@ -53,12 +53,9 @@
         top: 165px;
         @include mq(tablet) {
             height: 315px;
-            // left: 30%;
         }
         @include mq(phone) {
             height: 345px;
-            // top: 130px;
-            // left: 20%;
         }
     }
     .layer-3 {
@@ -69,8 +66,6 @@
         left: 51px;
         @include mq(tablet) {
             height: 356px;
-            // left: 42px;
-            // right: 42px;
         }
         @include mq(phone) {
             height: 390px;

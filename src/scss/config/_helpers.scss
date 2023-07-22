@@ -35,50 +35,67 @@
     }
 }
 
-.col-50 {
-    flex: 1 1 50%;
-    max-width: 50%;
-    @include mq(phone) {
-        @include noFlex();
+$width: (
+    "55": 55%,
+    "50": 50%,
+    "53": 53.33%,
+    "46": 46.66%,
+    "45": 45%,
+    "33": 33.33%);
+@each $item,$i in $width {
+    .col-#{$item} {
+        flex: 1 1 $i;
+        max-width: $i;
+        @include mq(phone) {
+            @include noFlex();
+        }
     }
 }
 
-.col-53 {
-    flex: 1 1 53.33%;
-    max-width: 53.33%;
-    @include mq(phone) {
-        @include noFlex();
-    }
-}
+// .col-50 {
+//     flex: 1 1 50%;
+//     max-width: 50%;
+//     @include mq(phone) {
+//         @include noFlex();
+//     }
+// }
 
-.col-46 {
-    flex: 1 1 46.66%;
-    max-width: 46.66%;
-    @include mq(phone) {
-        @include noFlex();
-    }
-}
+// .col-53 {
+//     flex: 1 1 53.33%;
+//     max-width: 53.33%;
+//     @include mq(phone) {
+//         @include noFlex();
+//     }
+// }
 
-.col-33 {
-    flex: 1 1 33.33%;
-    max-width: 33.33%;
-    @include mq(phone) {
-        @include noFlex();
-    }
-}
+// .col-46 {
+//     flex: 1 1 46.66%;
+//     max-width: 46.66%;
+//     @include mq(phone) {
+//         @include noFlex();
+//     }
+// }
 
-.col-45 {
-    flex: 1 1 45%;
-    max-width: 45%;
-    @include mq(phone) {
-        @include noFlex();
-    }
-}
+// .col-33 {
+//     flex: 1 1 33.33%;
+//     max-width: 33.33%;
+//     @include mq(phone) {
+//         @include noFlex();
+//     }
+// }
 
-.col-55 {
-    flex: 1 1 55%;
-    max-width: 55%;
-    @include mq(phone) {
-        @include noFlex();
-    }
-}
+// .col-45 {
+//     flex: 1 1 45%;
+//     max-width: 45%;
+//     @include mq(phone) {
+//         @include noFlex();
+//     }
+// }
+
+// .col-55 {
+//     flex: 1 1 55%;
+//     max-width: 55%;
+//     @include mq(phone) {
+//         @include noFlex();
+//     }
+// }
