@@ -119,7 +119,7 @@ function watchTask() {
 function browserSync(cb) {
     browsersync.init({
         server: {
-            baseDir: './'
+            baseDir: './assets/'
         },
     });
     cb();
