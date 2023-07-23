@@ -8,12 +8,12 @@ function navigation() {
     $nav.animate({
       width: 'toggle'
     });
-    $main.css('opacity','0.3');
+    $main.toggleClass('opacity');
   });
   $(window).on('scroll', function() {
     if($(this).height()>500) {
       $nav.removeAttr('style');
-      $main.removeAttr('style');
+      $main.removeClass('opacity');
     }
   })
   
