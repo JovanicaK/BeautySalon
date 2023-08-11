@@ -4,6 +4,7 @@
     margin: 20px 0;
     .wrapper {
         @include flex-between;
+        position: relative;
     }
     .nav-link {
         color: $white;
@@ -23,7 +24,7 @@
     position: absolute;
     z-index: 3;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: $dark;
     @include mq(tablet) {
         width: 100%;
@@ -48,10 +49,12 @@
 
 .list-icon {
     font-size: 36px;
+    line-height: 1;
 }
 
 .x-icon {
     font-size: 28px;
+    line-height: 1;
     color: $white;
 }
 

@@ -19,6 +19,10 @@ body {
     font-family: $primary-font;
 }
 
+h1,h2,h3,h4 {
+    font-family: $secondary-font;
+}
+
 * {
     transition: all 0.3s ease-in-out;
 }

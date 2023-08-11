@@ -10,6 +10,9 @@ button {
     height: 44px;
     border: none;
     background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 50px;
     @include centerFlex();
 }
 

@@ -14,9 +14,9 @@ a {
 .learn-link {
     display: inline-block;
     text-decoration: none;
-    @include text(16px,29px,400);
     color: $peach;
     margin-bottom: 65px;
+    @include text(16px,29px,400);
     &:hover {
         color: $rose-bud;
     }

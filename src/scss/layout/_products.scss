@@ -1,18 +1,30 @@
 .products {
+    position: relative;
     .card__line {
         @include mq(phone) {
             width: 24px;
         }
     }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
 .products__img {
     min-height: 641px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53.33%;
     @include mq(tablet) {
         min-height: 537px;
     }
 }
 
 .products__content {
+    width: 50%;
     padding-left: 56px;
     padding-right: 87px;
     color: $dark;
@@ -45,13 +57,12 @@
     background-color: $black;
     color: $white;
     margin-bottom: 65px;
-    margin-right: 338px;
+    align-self: flex-start;
     text-align: center;
     @include mq(tablet) {
         margin-bottom: 50px;
-        margin-right: 88.4px;
     }
     @include mq(phone) {
-        margin-right: auto;
+        align-self: center;
     }
 }

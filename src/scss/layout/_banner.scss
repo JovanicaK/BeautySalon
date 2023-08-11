@@ -1,27 +1,35 @@
 .banner {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    @include mq(phone) {
-        flex-direction: column-reverse;
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
     }
 }
 
 .banner__img {
     min-height: 680px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53.33%;
     @include mq(phone) {
         min-height: 610px;
     }
 }
 
 .banner__content {
-    padding: 100px 60px 50px 0;
     color: $dark;
     position: relative;
-    z-index: 2;
+    width: 50%;
     @include mq(phone) {
         padding: 50px 30px;
     }
+}
+
+.banner__content-inner {
+    padding: 100px 0 200px 80px;
 }
 
 .banner__subtitle {
@@ -35,10 +43,6 @@
 
 .banner__text {
     margin-bottom: 20px;
-    margin-right: 82px;
-    @include mq(tablet) {
-        margin-right: 31px;
-    }
 }
 
 .banner__text--italic {
